@@ -4,6 +4,7 @@ import (
   "fmt"
   "runtime"
   "net/http"
+  "os"
   "time"
 
   "github.com/CWright777/go-api/endpoint"
@@ -19,6 +20,7 @@ func main() {
           "go_Arch", runtime.GOARCH,
           "host", config.Host,
           "port", config.Port,
+          "pid", os.Getpid(),
   )
 
 
